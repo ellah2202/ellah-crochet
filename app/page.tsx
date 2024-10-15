@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 import { Info } from "@/components/Info";
 import { Product } from "@/components/Product";
 import { Service } from "@/components/Service";
-import Image from "next/image";
+import Script from "next/script";
 
 export default function Home() {
   return (
@@ -24,7 +24,7 @@ export default function Home() {
 
     <Footer/>
     
-    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+    <Script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"/>
   </>
   );
 }
