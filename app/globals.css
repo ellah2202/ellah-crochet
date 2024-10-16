@@ -25,3 +25,17 @@ body {
     text-wrap: balance;
   }
 }
+
+.cover {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header {
+  position : fixed;
+  width: 100vw;
+}
