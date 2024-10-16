@@ -1,3 +1,4 @@
+import About from "@/components/About";
 import { Company } from "@/components/Company";
 import { Cover } from "@/components/Cover";
 import { Footer } from "@/components/Footer";
@@ -14,6 +15,8 @@ export default function Home() {
 
     <Cover/>
 
+    <About/>
+    
     <Product/>
     
     <Company/>
