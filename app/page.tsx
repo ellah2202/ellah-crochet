@@ -1,9 +1,11 @@
 import About from "@/components/About";
 import { Company } from "@/components/Company";
 import { Cover } from "@/components/Cover";
+import { BentoDemo } from "@/components/DemoBento";
 import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
+import { HeroBullets } from "@/components/HeroBullets";
 import { Info } from "@/components/Info";
+import { NavbarDemo } from "@/components/Navbar";
 import { Product } from "@/components/Product";
 import { Service } from "@/components/Service";
 import Script from "next/script";
@@ -11,10 +13,11 @@ import Script from "next/script";
 export default function Home() {
   return (
     <>
-    <Header/>
+    <NavbarDemo/>
 
-    <Cover/>
+    <HeroBullets/>
 
+    <BentoDemo/>
     <About/>
     
     <Product/>
