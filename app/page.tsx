@@ -1,12 +1,9 @@
 import About from "@/components/About";
-import { Company } from "@/components/Company";
 import { BentoDemo } from "@/components/DemoBento";
 import { Footer } from "@/components/Footer";
 import { HeroBullets } from "@/components/HeroBullets";
-import { Info } from "@/components/Info";
 import { NavbarDemo } from "@/components/Navbar";
-import { Product } from "@/components/Product";
-import { Service } from "@/components/Service";
+import { Step } from "@/components/Step";
 import Script from "next/script";
 
 export default function Home() {
@@ -15,18 +12,13 @@ export default function Home() {
     <NavbarDemo/>
 
     <HeroBullets/>
+    
+    <About/>
 
     <BentoDemo/>
-    <About/>
+
+    <Step/>
     
-    <Product/>
-    
-    <Company/>
-
-    <Service/>
-
-   <Info/>
-
     <Footer/>
     
     <Script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"/>

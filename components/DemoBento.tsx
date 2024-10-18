@@ -2,25 +2,26 @@
 import {
     BellIcon,
     CalendarIcon,
-    FileTextIcon,
     GlobeIcon,
-    InputIcon,
+    HeartFilledIcon,
   } from "@radix-ui/react-icons";
   
   import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
+import SparklesText from "./ui/sparkles-text";
+import { IconHeartFilled,  } from "@tabler/icons-react";
   
   const features = [
     {
-      Icon: FileTextIcon,
+      Icon: IconHeartFilled,
       name: "Save your files",
       description: "We automatically save your files as you type.",
       href: "/",
       cta: "Learn more",
-      background: <img className="absolute -right-20 -top-20 opacity-60" />,
+      background: <img className="absolute -right-20 -top-20 opacity-60"/>,
       className: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3",
     },
     {
-      Icon: InputIcon,
+      Icon: HeartFilledIcon,
       name: "Full text search",
       description: "Search through all your files in one place.",
       href: "/",
@@ -44,7 +45,7 @@ import {
       href: "/",
       cta: "Learn more",
       background: <img className="absolute -right-20 -top-20 opacity-60" />,
-      className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2",
+      className: "lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2",
     },
     {
       Icon: BellIcon,
@@ -52,29 +53,52 @@ import {
       description:
         "Get notified when someone shares a file or mentions you in a comment.",
       href: "/",
-      cta: "Learn moresssss",
+      cta: "Learn more",
       background: <img className="absolute -right-20 -top-20 opacity-60" />,
-      className: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4",
+      className: "lg:col-start-3 lg:col-end-4 lg:row-start-2 lg:row-end-4",
     },
     {
-        Icon: BellIcon,
-        name: "Rolio",
-        description:
-          "Get notified when someone shares a file or mentions you in a comment.",
-        href: "#",
-        cta: "Interresse",
-        background: <img className="absolute -right-20 -top-20 opacity-60" />,
-        className: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4",
-      },
+      Icon: BellIcon,
+      name: "Another Card 1",
+      description:
+        "Get notified when someone shares a file or mentions you in a comment.",
+      href: "#",
+      cta: "Interresse",
+      background: <img className="absolute -right-20 -top-20 opacity-60" />,
+      className: "lg:col-start-1 lg:col-end-2 lg:row-start-4 lg:row-end-5",
+    },
+    {
+      Icon: BellIcon,
+      name: "Another Card 2",
+      description:
+        "Get notified when someone shares a file or mentions you in a comment.",
+      href: "#",
+      cta: "Interresse",
+      background: <img className="absolute -right-20 -top-20 opacity-60" />,
+      className: "lg:col-start-2 lg:col-end-3 lg:row-start-4 lg:row-end-5",
+    },
+    {
+      Icon: BellIcon,
+      name: "Another Card 3",
+      description:
+        "Get notified when someone shares a file or mentions you in a comment.",
+      href: "#",
+      cta: "Interresse",
+      background: <img className="absolute -right-20 -top-20 opacity-60" />,
+      className: "lg:col-start-3 lg:col-end-5 lg:row-start-4 lg:row-end-5",
+    },
   ];
+  
   
   export async function BentoDemo() {
     return (
-      <BentoGrid className="lg:grid-rows-3">
-        {features.map((feature) => (
-          <BentoCard key={feature.name} {...feature} />
-        ))}
-      </BentoGrid>
+      <div>
+        <SparklesText text="Produits Disponible" className="flex items-center justify-center m-4"/>
+        <BentoGrid className="lg:grid-rows-4">
+          {features.map((feature) => (
+            <BentoCard key={feature.name} {...feature} />
+          ))}
+        </BentoGrid>
+      </div>
     );
   }
-  
