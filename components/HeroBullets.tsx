@@ -6,9 +6,9 @@ import classes from './HeroBullets.module.css';
 export function HeroBullets() {
   return (
     <BackgroundImage
-        src="image/bg_cover.png"
+        src="image/bg_cover_.png"
       >
-    <Container size="xl" >
+    <Container size="lg" >
       <div className={classes.inner}>
         <div className={classes.content}>
           <Title className={classes.title}>

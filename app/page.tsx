@@ -1,6 +1,5 @@
 import About from "@/components/About";
 import { Company } from "@/components/Company";
-import { Cover } from "@/components/Cover";
 import { BentoDemo } from "@/components/DemoBento";
 import { Footer } from "@/components/Footer";
 import { HeroBullets } from "@/components/HeroBullets";
