@@ -44,11 +44,11 @@ const content = [
     content: (
         <div className="h-full w-full  flex items-center justify-center text-black">
         <Image
-          src=""
+          src="/image/step4.jpg"
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="/image/step4.jpg"
+          alt="afgh"
         />
       </div>
     ),
@@ -61,6 +61,22 @@ const content = [
         <div className="h-full w-full  flex items-center justify-center text-black">
         <Image
           src="/image/step5.jpg"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="linear board demo"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Oh there is one more",
+    description:
+      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    content: (
+        <div className="h-full w-full  flex items-center justify-center text-black">
+        <Image
+          src="/image/step3.jpg"
           width={300}
           height={300}
           className="h-full w-full object-cover"

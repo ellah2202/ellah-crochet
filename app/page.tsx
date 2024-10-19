@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import { Contact } from "@/components/Contact";
 import { BentoDemo } from "@/components/DemoBento";
 import { Footer } from "@/components/Footer";
 import { HeroBullets } from "@/components/HeroBullets";
@@ -9,6 +10,7 @@ import Script from "next/script";
 export default function Home() {
   return (
     <>
+    
     <NavbarDemo/>
 
     <HeroBullets/>
@@ -18,7 +20,9 @@ export default function Home() {
     <BentoDemo/>
 
     <Step/>
-    
+  
+    <Contact/>
+  
     <Footer/>
     
     <Script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"/>
