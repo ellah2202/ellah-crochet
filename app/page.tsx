@@ -5,27 +5,23 @@ import { Footer } from "@/components/Footer";
 import { HeroBullets } from "@/components/HeroBullets";
 import { NavbarDemo } from "@/components/Navbar";
 import { Step } from "@/components/Step";
-import Script from "next/script";
 
 export default function Home() {
   return (
     <>
-    
-    <NavbarDemo/>
+      <NavbarDemo />
 
-    <HeroBullets/>
-    
-    <About/>
+      <HeroBullets />
 
-    <BentoDemo/>
+      <About />
 
-    <Step/>
-  
-    <Contact/>
-  
-    <Footer/>
-    
-    <Script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"/>
-  </>
+      <BentoDemo />
+
+      <Step />
+
+      <Contact />
+
+      <Footer />
+    </>
   );
 }

@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
+import { ThemeProvider } from "@/components/theme-provider";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -30,10 +31,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem
+            disableTransitionOnChange
+          >
         <MantineProvider defaultColorScheme="light" >
           {children}
         </MantineProvider>
+          </ThemeProvider>
       </body>
     </html>
   );
