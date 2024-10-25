@@ -15,8 +15,6 @@ export function HamburgerMenu() {
 function Navbar({ className }: { className?: string }) {
     const [active, setActive] = useState<string | null>(null);
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [isServicesOpen, setServicesOpen] = useState(false);
-    const [isProductsOpen, setProductsOpen] = useState(false);
     const [isPricingOpen, setPricingOpen] = useState(false);
 
     return (
