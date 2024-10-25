@@ -92,7 +92,7 @@ const features = [
 
 export function BentoDemo() {
   return (
-    <div>
+    <div id="truc">
       <SparklesText text="Produits Disponible" className="flex items-center justify-center m-4" />
       <BentoGrid className="lg:grid-rows-4">
         {features.map((feature) => (
