@@ -15,7 +15,7 @@ export function Contact() {
     return null;
   }
   return (
-    <section className="py-8 px-4 mx-auto max-w-2xl lg:py-16 bg-white dark:bg-gray-900">
+    <section id="contact" className="py-8 px-4 mx-auto max-w-2xl lg:py-16 bg-white dark:bg-gray-900" >
       <LetterPullup words={"Laissez-nous un message"} delay={0.05} />
       <form action="#" className="grid gap-4 sm:grid-cols-2 sm:gap-6">
         <div className="sm:col-span-2">

@@ -1,66 +1,146 @@
-'use client'
-
-import { useState } from 'react'
-import { Menu, X, Plus, Minus } from 'lucide-react'
+"use client";
+import React, { useState } from "react";
+import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
+import { cn } from "@/lib/utils";
+import { IconMenu4, IconX } from "@tabler/icons-react";
 
 export function HamburgerMenu() {
-    const [isOpen, setIsOpen] = useState(false)
-    const [isSelectorOpen, setIsSelectorOpen] = useState(false)
+    return (
+        <div className="relative w-full flex items-center justify-center">
+            <Navbar className="top-2 border rounded-full" />
+        </div>
+    );
+}
+
+function Navbar({ className }: { className?: string }) {
+    const [active, setActive] = useState<string | null>(null);
+    const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [isServicesOpen, setServicesOpen] = useState(false);
+    const [isProductsOpen, setProductsOpen] = useState(false);
+    const [isPricingOpen, setPricingOpen] = useState(false);
 
     return (
-        <div className="fixed top-4 right-4 z-50">
-            <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
-                aria-expanded={isOpen}
-                aria-label={isOpen ? "Close menu" : "Open menu"}
-            >
-                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+        <div
+            className={cn(
+                "fixed top-10 inset-x-0 max-w-4xl mx-auto z-50 rounded-full flex items-center justify-between px-4",
+                className
+            )}
+            style={{ borderColor: '#FFFFFF00' }}
+        >
+            {/* Section pour le logo à gauche */}
+            <div className="flex-shrink-0">
+            </div>
 
-            {isOpen && (
-                <div className="absolute top-16 right-0 w-48 bg-background border border-border rounded-md shadow-lg p-4 transition-all duration-300 ease-in-out">
-                    <nav>
-                        <ul className="space-y-2">
-                            <li>
-                                <a href="#" className="block py-2 px-4 hover:bg-muted rounded-md">Option 1</a>
-                            </li>
-                            <li>
-                                <a href="#" className="block py-2 px-4 hover:bg-muted rounded-md">Option 2</a>
-                            </li>
-                            <li>
-                                <div className="relative">
-                                    <button
-                                        onClick={() => setIsSelectorOpen(!isSelectorOpen)}
-                                        className="flex items-center justify-between w-full py-2 px-4 hover:bg-muted rounded-md"
-                                        aria-expanded={isSelectorOpen}
-                                    >
-                                        <span>Selector</span>
-                                        {isSelectorOpen ? (
-                                            <Minus className="w-4 h-4" />
-                                        ) : (
-                                            <Plus className="w-4 h-4" />
-                                        )}
-                                    </button>
-                                    {isSelectorOpen && (
-                                        <ul className="mt-2 ml-4 space-y-2">
-                                            <li>
-                                                <a href="#" className="block py-1 px-4 hover:bg-muted rounded-md">Sub-option 1</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" className="block py-1 px-4 hover:bg-muted rounded-md">Sub-option 2</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" className="block py-1 px-4 hover:bg-muted rounded-md">Sub-option 3</a>
-                                            </li>
-                                        </ul>
-                                    )}
-                                </div>
-                            </li>
-                        </ul>
-                    </nav>
+            {/* Menu pour les grands écrans */}
+            <div className="hidden md:flex flex-grow justify-center">
+                <Menu setActive={setActive} >
+                    <MenuItem setActive={setActive} active={active} item="Services">
+                        <div className="flex flex-col space-y-4 text-sm">
+                            <HoveredLink href="/web-dev">Web Development</HoveredLink>
+                            <HoveredLink href="/interface-design">Interface Design</HoveredLink>
+                            <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
+                            <HoveredLink href="/branding">Branding</HoveredLink>
+                        </div>
+                    </MenuItem>
+                    <MenuItem setActive={setActive} active={active} item="Products">
+                        <div className="text-sm grid grid-cols-2 gap-10 p-4">
+                            <ProductItem
+                                title="Algochurn"
+                                href="#"
+                                src="/image/img_cover.png"
+                                description="Prepare for tech interviews like never before."
+                            />
+                            <ProductItem
+                                title="Algochurn"
+                                href="#"
+                                src="/image/img_cover.png"
+                                description="Prepare for tech interviews like never before."
+                            />
+                            <ProductItem
+                                title="Algochurn"
+                                href="#"
+                                src="/image/img_cover.png"
+                                description="Prepare for tech interviews like never before."
+                            />
+                            <ProductItem
+                                title="Algochurn"
+                                href="#"
+                                src="/image/img_cover.png"
+                                description="Prepare for tech interviews like never before."
+                            />
+                        </div>
+                    </MenuItem>
+                    <MenuItem setActive={setActive} active={active} item="Pricing">
+                        <div className="flex flex-col space-y-4 text-sm">
+                            <HoveredLink href="/hobby">Hobby</HoveredLink>
+                            <HoveredLink href="/individual">Individual</HoveredLink>
+                            <HoveredLink href="/team">Team</HoveredLink>
+                            <HoveredLink href="/enterprise">Enterprise</HoveredLink>
+                        </div>
+                    </MenuItem>
+                </Menu>
+            </div>
+
+            {/* Bouton Contacter pour les grands écrans */}
+            <div className="hidden md:block flex-shrink-0">
+                <button className="bg-pink-500 text-white px-4 py-2 rounded-full">
+                    Contacter
+                </button>
+            </div>
+
+            {/* Menu Hamburger pour les petits écrans */}
+            <div className="md:hidden flex-shrink-0">
+                <button
+                    onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+                    className="bg-pink-500 text-white p-2 rounded-full"
+                >
+                    {isMobileMenuOpen ? (
+                        <IconX className="h-6 w-6" />
+                    ) : (
+                        <IconMenu4 className="h-6 w-6" />
+                    )}
+                </button>
+            </div>
+
+            {/* Menu mobile */}
+            {isMobileMenuOpen && (
+                <div className="absolute top-16 inset-x-0 bg-white border rounded-lg shadow-lg p-4">
+                    <div className="flex flex-col space-y-4">
+                        {/* Logo dans le menu mobile */}
+                        <div className="flex-shrink-0">
+                            <img
+                                src="/image/logo.png"
+                                alt="Logo"
+                                className="h-16 w-16 mx-auto"
+                            />
+                        </div>
+
+                        <a href="#about">A propos</a>
+                        <a href="#truc">Produits</a>
+
+                        {/* Sous-menu Pricing */}
+                        <button
+                            onClick={() => setPricingOpen(!isPricingOpen)}
+                            className="text-left text-sm"
+                        >
+                            Tutoriel {isPricingOpen ? "-" : "+"}
+                        </button>
+                        {isPricingOpen && (
+                            <div className="flex flex-col space-y-2 ml-4 text-sm">
+                                <HoveredLink href="#">Habillement</HoveredLink>
+                                <HoveredLink href="#">Raphia</HoveredLink>
+                                <HoveredLink href="#">Decoration</HoveredLink>
+                                <HoveredLink href="#">Peluche</HoveredLink>
+                            </div>
+                        )}
+
+                        {/* Bouton Contacter dans le menu mobile */}
+                        <button className="bg-pink-500 text-white px-4 py-2 rounded-full mt-4">
+                            Contacter
+                        </button>
+                    </div>
                 </div>
             )}
         </div>
-    )
+    );
 }

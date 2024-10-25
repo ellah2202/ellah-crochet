@@ -28,69 +28,54 @@ function Navbar({ className }: { className?: string }) {
           )}
           style={{ borderColor: '#f997ea' }}
         >
-          {/* Section pour le logo à gauche */}
           <div className="flex-shrink-0">
-            <img
-              src="/image/logo.png"
-              alt="Logo"
-              className="h-16 w-16"
-            />
+            <a href="#">
+              <img
+                src="/image/logo.png"
+                alt="Logo"
+                className="h-16 w-16"
+              />
+            </a>
           </div>
 
-          {/* Menu centré */}
           <div className="flex-grow">
             <Menu setActive={setActive} >
-              <MenuItem setActive={setActive} active={active} item="Services">
-                <div className="flex flex-col space-y-4 text-sm">
-                  <HoveredLink href="/web-dev">Web Development</HoveredLink>
-                  <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-                  <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-                  <HoveredLink href="/branding">Branding</HoveredLink>
-                </div>
-              </MenuItem>
-              <MenuItem setActive={setActive} active={active} item="Products">
+              <a href="#about">A propos</a>
+              <a href="#truc">Produits</a>
+              <MenuItem setActive={setActive} active={active} item="Tutoriel">
                 <div className="text-sm grid grid-cols-2 gap-10 p-4">
                   <ProductItem
-                    title="Algochurn"
+                    title="Habillement"
                     href="#"
-                    src="/image/img_cover.png"
-                    description="Prepare for tech interviews like never before."
+                    src="/image/clothes.jpg"
+                    description="Craquez pour la douceur du crochet, pour un look incomparable."
                   />
                   <ProductItem
-                    title="Algochurn"
+                    title="Raphia"
                     href="#"
-                    src="/image/img_cover.png"
-                    description="Prepare for tech interviews like never before."
+                    src="/image/raphia.jpg"
+                    description="Adoptez la tendance raphia crocheté et soyez éco-responsable."
                   />
                   <ProductItem
-                    title="Algochurn"
+                    title="Decoration"
                     href="#"
-                    src="/image/img_cover.png"
-                    description="Prepare for tech interviews like never before."
+                    src="/image/deco.jpg"
+                    description="Apportez une touche chaleureuse et artisanale à votre intérieur."
                   />
                   <ProductItem
-                    title="Algochurn"
+                    title="Peluche"
                     href="#"
-                    src="/image/img_cover.png"
-                    description="Prepare for tech interviews like never before."
+                    src="/image/peluche.png"
+                    description="Craquez pour nos adorables peluches en crochet, douces et faites main."
                   />
-                </div>
-              </MenuItem>
-              <MenuItem setActive={setActive} active={active} item="Pricing">
-                <div className="flex flex-col space-y-4 text-sm">
-                  <HoveredLink href="/hobby">Hobby</HoveredLink>
-                  <HoveredLink href="/individual">Individual</HoveredLink>
-                  <HoveredLink href="/team">Team</HoveredLink>
-                  <HoveredLink href="/enterprise">Enterprise</HoveredLink>
                 </div>
               </MenuItem>
             </Menu>
           </div>
 
-          {/* Bouton Contacter à droite */}
           <div className="flex-shrink-0">
             <button className="bg-pink-500 text-white px-4 py-2 rounded-full">
-              Contacter
+              <a href="#contact">Contacter </a>
             </button>
           </div>
         </nav>
