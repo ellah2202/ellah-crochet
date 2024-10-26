@@ -25,9 +25,9 @@ function Navbar({ className }: { className?: string }) {
             )}
             style={{ borderColor: '#FFFFFF00' }}
         >
-            {/* Section pour le logo à gauche */}
+            {/* Section pour le logo à gauche 
             <div className="flex-shrink-0">
-            </div>
+            </div>*/}
 
             {/* Menu pour les grands écrans */}
             <div className="hidden md:flex flex-grow justify-center">

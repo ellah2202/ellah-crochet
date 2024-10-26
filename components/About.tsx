@@ -15,11 +15,10 @@ export default function About() {
           </div>
           <div className="md:7/12 lg:w-1/2">
             <h2 className="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white">
-              Nuxt development is carried out by passionate developers
+              Tant que vous pouvez l'imaginez, on peut le realiser
             </h2>
             <p className="my-8 text-gray-600 dark:text-gray-300">
-              Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at?
-              Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.
+              Confiez-nous votre 
             </p>
             <div className="divide-y space-y-4 divide-gray-100 dark:divide-gray-800">
               <div className="mt-8 flex gap-4 md:items-center">
