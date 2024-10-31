@@ -1,9 +1,9 @@
 export default function About() {
   return (
 
-    <div className="py-16" id="about">
-      <div className="xl:container m-auto px-6 text-gray-600 md:px-12 xl:px-16">
-        <div className="lg:bg-gray-50 dark:lg:bg-darker lg:p-16 rounded-[4rem] space-y-6 md:flex flex-row-reverse md:gap-6 justify-center md:space-y-0 lg:items-center" style={{ backgroundColor: '#ffefe7' }}>
+    <div className="mb-7" id="about">
+      <div className="xl:container m-auto px-6 text-gray-600 md:px-12 xl:px-16 ">
+        <div className="lg:bg-gray-50 dark:lg:bg-darker p-16 lg:px-16 rounded-[4rem] space-y-6 md:flex flex-row-reverse md:gap-6 justify-center md:space-y-0 lg:items-center" style={{ backgroundColor: '#ffefe7' }}>
           <div className="md:5/12 lg:w-1/2">
             <img
               src="/image/img_about.png"

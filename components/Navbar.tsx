@@ -1,14 +1,14 @@
 "use client";
-import React, { useState } from "react";
 import { Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "@/lib/utils";
+import React, { useState } from "react";
 import { useWindowSize } from "./UseWindowsSize";
 import { HamburgerMenu } from "./MenuHamburger";
 
 export function NavbarDemo() {
   return (
-    <div className="relative w-full flex items-center justify-center">
-      <Navbar className="top-2 border rounded-full" />
+    <div className="relative w-full flex items-center justify-center ">
+      <Navbar className="top-2 border rounded-full bg-pink-300/30 backdrop-blur-sm" />
     </div>
   );
 }
@@ -23,7 +23,7 @@ function Navbar({ className }: { className?: string }) {
       ) : (
         <nav
           className={cn(
-            "fixed top-10 inset-x-0 max-w-4xl mx-auto z-50 border rounded-full flex items-center justify-between px-4 bg-white",
+            "fixed top-10 inset-x-0 max-w-4xl mx-auto z-50 border rounded-full flex items-center justify-between px-4",
             className
           )}
           style={{ borderColor: '#f997ea' }}
@@ -38,8 +38,8 @@ function Navbar({ className }: { className?: string }) {
             </a>
           </div>
 
-          <div className="flex-grow">
-            <Menu setActive={setActive} >
+          <div className="flex-grow ">
+            <Menu setActive={setActive}  >
               <a href="#about">A propos</a>
               <a href="#truc">Produits</a>
               <MenuItem setActive={setActive} active={active} item="Tutoriel">

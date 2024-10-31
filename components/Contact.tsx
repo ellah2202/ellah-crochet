@@ -16,7 +16,7 @@ export function Contact() {
   }
   return (
     <section id="contact" className="py-8 px-4 mx-auto max-w-2xl lg:py-16 bg-white dark:bg-gray-900" >
-      <LetterPullup words={"Laissez-nous un message"} delay={0.05} />
+      <LetterPullup words={"Contact"} delay={0.05} />
       <form action="#" className="grid gap-4 sm:grid-cols-2 sm:gap-6">
         <div className="sm:col-span-2">
           <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">

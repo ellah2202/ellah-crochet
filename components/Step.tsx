@@ -89,7 +89,13 @@ const content = [
 export function Step() {
   return (
     <div className="p-10">
+      <div className="hidden lg:block">
         <LetterPullup words={"Etapes de creation de truc machin"} delay={0.05} />
+      </div>
+      <div className="block lg:hidden">
+        <LetterPullup words={"Etapes de creation"} delay={0.05} />
+        <LetterPullup words={"de truc machin"} delay={0.05} />
+      </div>
         <StickyScroll content={content}/>
     </div>
   );

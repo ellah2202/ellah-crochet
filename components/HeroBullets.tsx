@@ -1,15 +1,15 @@
 "use client"
-import { Container, Title, Button, Group, Text, List, ThemeIcon, rem, BackgroundImage } from '@mantine/core';
+import { Container, Title, Button, Group, Text, List, ThemeIcon, rem, Image } from '@mantine/core';
 import { IconCheck } from '@tabler/icons-react';
 import classes from './HeroBullets.module.css';
 
 export function HeroBullets() {
   return (
-    <BackgroundImage
-      src="image/bg_cover_.png"
+    <div
+      className="bg-none md:bg-[url('/image/bg_cover_.png')] bg-cover bg-no-repeat"
     >
-      <Container size="sm">
-        <div className={classes.inner}>
+      <Container size="lg">
+        <div className={`${classes.inner} sm:flex sm:justify-between sm:py-16`}>
           <div className={classes.content}>
             <Title className={classes.title}>
               Craquez pour nos <br /> <span className={classes.highlight}> mignonneries </span>   fais mains.
@@ -47,10 +47,10 @@ export function HeroBullets() {
                 <a href="#truc">Produits</a>
               </Button>
             </Group>
-            {/* <Image src={"/image/img_cover.png"} className={classes.image} /> */}
           </div>
+            <Image src={"/image/img_cover.png"} className={classes.image} />
         </div>
       </Container>
-    </BackgroundImage>
+    </div>
   );
 }
